@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: rgb(136, 41, 41);
+      padding: 40px;
+      display: flex;
+      align-items: center;
+    }
+    header{
+      background-color: rgb(136, 41, 41);
+    }
+    .ABES{
+      background-color: rgb(124, 33, 33);
+      color: white;
+    }
+    .Student_registration{
+      background-color: #fff;
+      color: #000
+    }
+    form {
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: white;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 15px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+    .form{
+      background-color: #430000;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <img src="https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/dmzf8yle9vzdqyo2emwt" abes logo width="500" height="500">
+    <h1 style="background-color: rgb(118, 21, 21)" class="ABES">ABES ENGINEERING COLLEGE</h1>
+  </header>
+  <div class="form">
+  <form method="post" action="/submit-registration" bgcolor="#430000">
+    <h2 class="Student_registration">Student Registration Form</h2>
+
+    <label for="fullname">Full Name:</label>
+    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+    <label for="Father Name">Father name:</label>
+     <input type="text" id="father name" name="father name" placeholder="Enter father name" required>
+
+   <label for="Mother Name">Mother name:</label>
+   <input type="text" id="mother name" name="mother name" placeholder="Enter mother name" required>
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" placeholder="Enter a valid email" required>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" required>
+
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required>
+      <option value="">--Select--</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+
+    <label for="course">Course:</label>
+    <input type="text" id="course" name="course" placeholder="Enter your course name" required>
+
+    <label for="address">Address:</label>
+    <textarea id="address" name="address" rows="4" placeholder="Enter your address" required></textarea>
+
+    <button type="submit">Register</button>
+  </form>
+  </div>
+</body>
+</html>
