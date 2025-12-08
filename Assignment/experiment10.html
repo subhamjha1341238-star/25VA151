@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive E-Commerce Navbar</title>
+
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f4f4;
+        }
+        nav {
+            width: 100%;
+            background: #111;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+
+        .nav-links li a:hover {
+            color: #ffcc00;
+        }
+        .search-box{
+          display: flex;  
+          align-items: center;
+          background: white;
+          padding: 5px 10px;
+         border-radius: 20px;;
+        }
+        .search-box input{
+            border: none;
+            outline: none;
+            padding:5px;
+            font-size: 16px;;
+        }
+        .search-box button{
+            background: #ffcc00;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 14px;
+        }
+        .menu-icon {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+
+            .nav-links {
+                position: absolute;
+                top: 65px;
+                right: 0;
+                width: 100%;
+                background: #111;
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+                padding: 20px 0;
+                display: none; 
+            }
+
+            .nav-links.active {
+                display: flex; 
+            }
+
+            .menu-icon {
+                display: block; 
+            }
+            .search-box{
+                width:85%;
+                margin:0 auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">MY STORE</div>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links" id="navMenu">
+            <li>
+                <div class="seach-box">
+                    <input type="text" placeholder="search products...">
+                </div>
+            </li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Cart</a></li>
+            <li><a href="#">Account</a></li>
+             <li><a href="#">login</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("navMenu").classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
